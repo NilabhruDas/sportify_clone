@@ -132,6 +132,12 @@ body{
     transition: all 1s ;
 }
 
+.card img{
+    height:225px;
+    width: 225px;
+    object-fit: fill;
+}
+
 .card:hover{
     background-color: #3a3838;
     cursor: pointer;
@@ -141,13 +147,6 @@ body{
 .card >*{
     padding: 5px;
 }
-
-.card img{
-    width: 96%;
-    object-fit: contain;
-}
-
-
 
 .button > *{
     margin: 0 12px;
@@ -237,7 +236,6 @@ body{
 
 .volume{
     display: flex;
-    /* flex-direction: column; */
     align-items: center;
     gap: 20px;
     cursor: pointer;
@@ -308,9 +306,7 @@ body{
     position: relative;
     bottom: 7px;
     left: 0%;
-    /* transition: left 0.5s ease-in-out; */
 } 
-
 
 .songbuttons img{
     cursor: pointer;
@@ -383,6 +379,9 @@ body{
     .cardContainer{
         margin: 0;
         justify-content: center;
+        margin-bottom: 30vh;
+        overflow-y: unset;
+        max-height: unset;
     }
 
     .abovebar{
