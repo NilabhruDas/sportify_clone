@@ -191,12 +191,16 @@ async function main() {
     .addEventListener("change", (e) => {
       console.log("setting volume to", e.target, e.target.value);
       currentSong.volume = parseInt(e.target.value) / 100;
+      if (currentSong.volume >0){
+        document.querySelector(".volume>img").src = document.querySelector(".volume>img").src.replace("mute.svg", "volume.svg")
+    }
     });
 
   document.querySelector(".volume>img").addEventListener("click", (e) => {
     if (e.target.src.includes("svg/volume.svg")) {
       e.target.src = e.target.src.replace("svg/volume.svg", "svg/mute.svg");
       currentSong.volume = 0;
+      document.querySelector(".range").getElementsByTagName("input")[0].value = 0;
       document
         .querySelector(".range")
         .getElementsByTagName("input")[0].value = 0;
